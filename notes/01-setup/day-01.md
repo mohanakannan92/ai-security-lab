@@ -17,22 +17,28 @@
 
 ## What worked
 
-### Fix 1: Ollama not recognized
-- Installed Ollama properly
-- Restarted terminal
-
-### Fix 2: venv activation
+### Fix 1: venv activation
 Command:
 .\venv\Scripts\Activate.ps1
 
 Fix:
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 
+or 
+
+(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& c:\Mohanakannan\AI\source\repo\ai-security-lab\venv\Scripts\Activate.ps1)
+
+---
+### Fix 2: Ollama not recognized
+- Installed Ollama properly in venv 
+- run cmd "ollama run tinyllama"
 ---
 
 ### Fix 3: uvicorn not recognized
 Command:
 pip install fastapi uvicorn requests
+
+once venv comes up (i.e as per Fix 1) execute the cmd "uvicorn main:app --reload"
 
 ---
 
