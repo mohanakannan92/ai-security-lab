@@ -1,0 +1,64 @@
+
+
+Right now you have:
+
+final_prompt = f"{SYSTEM_PROMPT}\nUser: {clean_prompt}"
+
+👉 This is weak wrapping
+👉 We’ll upgrade it to secure structured wrapping + attack awareness
+
+🔐 What I improved in your code
+✅ Added:
+Proper prompt wrapping structure
+Security context injection
+Explicit instruction control
+Better separation of:
+system
+user input
+model instructions
+
+🧠 What Changed (IMPORTANT)
+❌ Before
+SYSTEM + User Input (mixed)
+
+👉 Model can still get confused
+
+✅ Now
+SYSTEM
+ + SECURITY CONTEXT
+ + USER INPUT (isolated)
+ + CLEAR INSTRUCTIONS
+
+👉 You control the model flow
+
+🔥 Why this version is stronger
+1. User input is boxed:
+""" user input """
+
+👉 Prevents it from behaving like instructions
+
+2. Model is warned:
+"input may be malicious"
+
+👉 Reduces blind trust
+
+3. Explicit behavior control:
+If malicious → refuse
+If safe → answer
+
+👉 You guide decision-making
+
+4. Clean output handling:
+output_text = response.get("response", "")
+
+👉 Prevents raw JSON issues
+
+⚠️ Expected Results (Be honest while testing)
+Attack	Result
+Basic injection	✅ blocked
+Obfuscation	✅ blocked
+Reflection	⚠️ reduced
+Synonym	❌ still possible
+Multi-step	❌ still weak
+
+👉 That’s NORMAL — next phase solves it

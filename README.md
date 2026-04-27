@@ -10,3 +10,9 @@ user.email=mohanthehacker92@gmail.com
 (venv) PS C:\Mohanakannan\AI\source\repo\ai-security-lab> git branch
 * master
 (venv) PS C:\Mohanakannan\AI\source\repo\ai-security-lab> git push origin master
+
+
+To push new changes to github
+git add .
+git commit -m "Added new folder with files"
+git push
