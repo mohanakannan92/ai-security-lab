@@ -1,0 +1,56 @@
+🧱 Phase 5 — Prompt Wrapping (Level 4)
+
+👉 Purpose:
+
+Control how input is given to the model
+
+What it does:
+Wraps user input
+Adds system rules
+Prevents instruction override
+Protects against:
+Role override
+Direct prompt injection
+Some multi-step attacks
+
+🔒 Phase 6 — Output Filtering Level 5
+
+👉 Purpose:
+
+Control what comes OUT of the model
+
+What it does:
+Scans model response
+Blocks sensitive info
+Prevents leakage
+Protects against:
+Reflection attacks
+Indirect extraction
+Semantic leakage (what you observed)
+
+🧠 Real-World Analogy
+
+Think like this:
+
+Prompt Wrapping = Security Guard at Entrance
+Checks what goes inside
+Output Filtering = Security Guard at Exit
+Checks what goes outside
+
+👉 You currently only have entrance security
+
+User Input
+   ↓
+[Layer 1] Basic Filter
+   ↓
+[Layer 2] Advanced Detection
+   ↓
+[Layer 3] Sanitization
+   ↓
+[Layer 4] Prompt Wrapping   ✅ (DONE)
+   ↓
+LLM (Ollama)
+   ↓
+[Layer 5] Output Filtering  ❌ (NEXT)
+   ↓
+User Response
