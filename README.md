@@ -35,3 +35,6 @@ uvicorn main:app --reload
 to run main.py via cmd
  & c:/Mohanakannan/AI/source/repo/ai-security-lab/venv/Scripts/python.exe c:/Mohanakannan/AI/source/repo/ai-security-lab/main.py
 
+or 
+
+python "notes\04-fixes\06-red team\01-test generator\test_generator.py"
