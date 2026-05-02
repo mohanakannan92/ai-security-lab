@@ -27,3 +27,11 @@ LLM (Ollama)
 🚨 Output Filter (NEXT STEP)
    ↓
 Safe Response
+
+🔥 Mental Model (Lock This In)
+01-test-generator → creates attacks
+02-attack-runner → sends requests
+03-scoring-system → evaluates + controls flow (MAIN)
+04-analysis → provides logic only
+
+👉 So Step 5.5 belongs to the FLOW, not the modules.

@@ -1,66 +1,145 @@
-# 🔐 AI Security Lab
+# 🛡️ AI Security Red Team Lab
 
-> Building, attacking, and defending real-world AI systems (LLMs, APIs, Agents)
-
----
-
-# 🚀 Overview
-
-This project simulates a **real-world AI application** and evaluates its security against **Prompt Injection Attacks**.
-
-It demonstrates:
-
-* ✅ Building an AI API using FastAPI + Local LLM (Ollama)
-* 💣 Attacking the system using real prompt injection techniques
-* 🛡️ Defending using layered security mechanisms (Level 1 → Level 4)
+A complete **AI security testing and evaluation platform** designed to simulate adversarial attacks, measure system robustness, and visualize weaknesses using a live dashboard.
 
 ---
 
-# 🧱 Architecture
+## 🚀 Overview
 
+This project implements a **multi-layer AI defense system** combined with an automated **red teaming pipeline**.
+
+It enables:
+
+* 🔐 Detection of malicious prompts
+* 🤖 Automated attack simulation
+* 📊 Security scoring & evaluation
+* 📉 Weakness identification
+* 📈 Real-time dashboard visualization
+
+---
+
+## 🧠 Key Features
+
+### 🔐 AI Defense System (Phase 1–5)
+
+* Input filtering (basic + advanced)
+* Intent detection (meta queries, bypass attempts)
+* Prompt wrapping (secure instruction design)
+* Output filtering (prevents sensitive leakage)
+
+---
+
+### 🤖 Red Team Engine (Phase 6)
+
+#### 1. Attack Generator
+
+Generates adversarial prompts across categories:
+
+* prompt_injection
+* role_override
+* instruction_bypass
+* multi_step
+* obfuscation
+* data_extraction
+
+---
+
+#### 2. Attack Runner
+
+* Sends attacks to API
+* Captures responses
+* Handles errors & timeouts
+
+---
+
+#### 3. Scoring System
+
+Evaluates each response:
+
+* ✅ Blocked
+* ⚠️ Bypass
+* ❌ Leak
+
+---
+
+#### 4. Analysis Layer
+
+* Security summary
+* Block / bypass / leak rates
+* Weak category detection
+
+---
+
+#### 5. Visualization Dashboard (Streamlit)
+
+* 📊 Metrics overview
+* 📉 Category-wise weakness
+* 📈 Security trend tracking
+* 📋 Detailed results table
+* 📥 CSV export
+
+---
+
+## 🧱 Architecture
+
+```
 User → FastAPI → Defense Pipeline → LLM (Ollama) → Response
+```
 
-### Components
+### 🔧 Components
 
-* **FastAPI Backend**
+**FastAPI Backend**
 
-  * Handles requests and applies security layers
-* **Ollama (Local LLM)**
+* Handles incoming requests
+* Applies layered security checks
 
-  * Models tested: `tinyllama`, `phi3`
-* **Defense Pipeline**
+**Ollama (Local LLM)**
 
-  * Input validation
-  * Normalization
-  * Risk scoring
-  * Prompt wrapping
-* **Attack Surface**
+* Models tested:
 
-  * Prompt injection via user input
+  * `tinyllama`
+  * `phi3`
+
+**Defense Pipeline**
+
+* Input validation
+* Normalization
+* Risk scoring
+* Prompt wrapping
+
+**Attack Surface**
+
+* Prompt injection via user input
 
 ---
 
-# ⚙️ Setup Instructions
+## ⚙️ Setup Instructions
 
 ### 1. Clone Repository
 
 ```bash
-git clone <your-repo-link>
+git clone https://github.com/mohanakannan92/ai-security-lab
 cd ai-security-lab
 ```
+
+---
 
 ### 2. Create Virtual Environment
 
 ```bash
 python -m venv venv
-.\venv\Scripts\Activate.ps1
+.\venv\Scripts\Activate.ps1   # Windows
 ```
+
+---
 
 ### 3. Install Dependencies
 
 ```bash
-pip install fastapi uvicorn requests ollama
+pip install fastapi uvicorn requests ollama streamlit pandas matplotlib
 ```
+
+---
 
 ### 4. Run LLM (Ollama)
 
@@ -68,13 +147,25 @@ pip install fastapi uvicorn requests ollama
 ollama run tinyllama
 ```
 
+---
+
 ### 5. Start API Server
 
 ```bash
 python -m uvicorn main:app --reload
 ```
 
-### 6. Open Swagger UI
+---
+
+### 6. Launch Dashboard
+
+```bash
+streamlit run 06-red-team/05-dashboard/dashboard.py
+```
+
+---
+
+### 7. Open Swagger UI (Optional)
 
 ```
 http://127.0.0.1:8000/docs
@@ -82,24 +173,30 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# 🛡️ Defense Architecture (Layered Security)
+## 🛡️ Defense Architecture (Layered Security)
 
-## ✅ Level 1 — Basic Filtering
+### ✅ Level 1 — Basic Filtering
 
 * Regex-based keyword blocking
 * Stops obvious attacks early
 
-## ✅ Level 2 — Advanced Detection
+---
+
+### ✅ Level 2 — Advanced Detection
 
 * Input normalization (handles obfuscation like `ign0re`)
 * Pattern detection
 * Risk scoring system
 
-## ✅ Level 3 — Input Sanitization
+---
+
+### ✅ Level 3 — Input Sanitization
 
 * Removes formatting tricks (newline injection, spacing abuse)
 
-## ✅ Level 4 — Prompt Wrapping
+---
+
+### ✅ Level 4 — Prompt Wrapping
 
 * Isolates system instructions
 * Treats user input as **untrusted data**
@@ -107,9 +204,9 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# 💣 Attack Evaluation
+## 💣 Attack Evaluation
 
-## 1️⃣ Role Override Attacks
+### 1️⃣ Role Override Attacks
 
 | Attack              | Result    |
 | ------------------- | --------- |
@@ -121,7 +218,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 2️⃣ Reflection Attacks
+### 2️⃣ Reflection Attacks
 
 | Attack              | Result              |
 | ------------------- | ------------------- |
@@ -133,7 +230,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 3️⃣ Indirect Extraction Attacks
+### 3️⃣ Indirect Extraction Attacks
 
 | Attack               | Result                |
 | -------------------- | --------------------- |
@@ -145,7 +242,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 4️⃣ Multi-step Attacks
+### 4️⃣ Multi-step Attacks
 
 | Attack               | Result    |
 | -------------------- | --------- |
@@ -156,9 +253,9 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# 🚨 Vulnerabilities Identified
+## 🚨 Vulnerabilities Identified
 
-## ⚠️ Semantic Leakage
+### ⚠️ Semantic Leakage
 
 The system prevents direct prompt exposure but still allows:
 
@@ -166,20 +263,20 @@ The system prevents direct prompt exposure but still allows:
 * Behavioral explanations
 * Security policy hints
 
-👉 This is a **real-world LLM limitation**
+👉 This reflects a **real-world LLM limitation**
 
 ---
 
-## ⚠️ Over-Helpful Model Behavior
+### ⚠️ Over-Helpful Model Behavior
 
-The model tries to:
+The model may:
 
 * Explain internal logic
-* Assist even when it shouldn't
+* Provide more detail than necessary
 
 ---
 
-# 📊 Risk Assessment
+## 📊 Risk Assessment
 
 | Risk              | Severity  |
 | ----------------- | --------- |
@@ -190,7 +287,7 @@ The model tries to:
 
 ---
 
-# 🧠 Key Learnings
+## 🧠 Key Learnings
 
 * Prompt Injection is a **category of attacks**, not a single technique
 * Keyword filtering alone is insufficient
@@ -204,9 +301,9 @@ The model tries to:
 
 ---
 
-# 🛠️ Next Improvements
+## 🛠️ Future Improvements
 
-## 🔒 Level 5 — Output Filtering (Planned)
+### 🔒 Level 5 — Output Filtering
 
 * Detect and block sensitive responses
 * Prevent:
@@ -214,7 +311,9 @@ The model tries to:
   * System prompt leakage
   * Internal policy exposure
 
-## 🔒 Future Work
+---
+
+### 🔮 Roadmap
 
 * Context-aware defense (multi-turn attacks)
 * LLM-based intent classifier
@@ -223,20 +322,25 @@ The model tries to:
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```
 ai-security-lab/
 ├── main.py
-├── notes/
+├── 06-red-team/
+│   ├── 01-test-generator/
+│   ├── 02-attack-runner/
+│   ├── 03-scoring-system/
+│   ├── 04-analysis/
+│   └── 05-dashboard/
+├── history.json
 ├── reports/
-│   └── prompt-injection-report.md
-├── README.md
+└── README.md
 ```
 
 ---
 
-# 🏁 Conclusion
+## 🏁 Conclusion
 
 This project demonstrates a **realistic AI security pipeline** capable of:
 
@@ -244,18 +348,17 @@ This project demonstrates a **realistic AI security pipeline** capable of:
 * Handling advanced multi-step attacks
 * Reducing attack success through layered defense
 
-⚠️ However, **semantic leakage remains an open challenge**, requiring further defense layers.
+⚠️ However, **semantic leakage remains an open challenge**, requiring advanced detection techniques.
 
 ---
 
-# 👨‍💻 Author
+## 🎤 Interview Summary
 
-Mohanakannan M
+> “I built an AI security platform that simulates adversarial attacks, evaluates model behavior, detects weaknesses, and visualizes security performance through a real-time dashboard.”
+
+---
+
+## 👨‍💻 Author
+
+**Mohanakannan M**
 AI Security Learner → Future AI Security Engineer 🚀
-
----
-
-## 📄 Detailed Report
-
-For full attack analysis and results, see:
-👉 reports/prompt-injection-report.md
