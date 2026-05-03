@@ -121,7 +121,7 @@ Most people stop at attacks → money is in defense
 
 ---
 
-# 📚 LAYER 4 — RAG SECURITY (AI-300)
+# 📚 LAYER 4 — RAG SECURITY (AI-300) - Started on 2/25/2026
 
 ## 🎯 Why:
 

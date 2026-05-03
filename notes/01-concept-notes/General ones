@@ -54,3 +54,13 @@ LLM (Ollama)
 [Layer 5] Output Filtering  ❌ (NEXT)
    ↓
 User Response
+
+
+## Topics added from PDF:
+
+* AI vs ML vs Deep Learning
+* Transformers (GPT, BERT basics)
+* Tokenization (VERY important for attacks)
+* Fine-tuning basics
+* Embeddings (CRITICAL for later attacks)
+* RAG architecture
