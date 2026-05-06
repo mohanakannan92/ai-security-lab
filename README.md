@@ -14,8 +14,15 @@ user.email=mohanthehacker92@gmail.com
 
 To push new changes to github
 git add .
+git status
 git commit -m "Added new folder with files"
 git push
+
+where:
+git add . → collects changes 
+git diff -> Shows exact code changes
+git commit → records decision  
+git push → publishes decision
 
 
 

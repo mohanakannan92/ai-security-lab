@@ -1,139 +1,150 @@
-Here’s your clean **Session State** to resume smoothly after breakfast 👇
+# 📌 Session State
 
 ---
 
-# 📌 Session State
-
 ## 🧭 Current Phase
 
-**Phase 7 — RAG Security (Advanced Defense)**
+**Layer 3 — Defense Engineering (Advanced)**
 
 ---
 
 ## 📍 Current Step
 
-👉 **Auto-Learning Defense (COMPLETED ✅)**
-➡️ **Next: Pattern Weighting (ADVANCED SCORING LAYER 🔥)**
+👉 **Intent-Aware Defense (IN PROGRESS 🔥)**
 
 ---
 
-## ✅ Completed Work
+## ✅ What You Completed
 
-### 🧱 RAG System
+### 🧠 Core System
 
-* Document loading (`load_documents`)
-* Retrieval (`retrieve_docs`)
-* Secure prompt building (`build_secure_prompt`)
-* Full pipeline (`run_rag`)
-
----
-
-### 🛡️ Defense Layers (STRONG 🔥)
-
-#### ✔ Context-Level Defense
-
-* Sanitization (line-by-line)
-* Regex filtering
-* Obfuscation handling
-
-#### ✔ Semantic Defense
-
-* Intent-based detection
-* Sensitive query blocking
-
-#### ✔ Confidence-Based Defense
-
-* Risk scoring (low / medium / high)
-* Action mapping (allow / guard / block)
+* Pattern weighting engine ✅
+* Combo attack detection ✅
+* Score-based risk classification ✅
 
 ---
 
-### 📊 Observability (BIG WIN 🔥)
+### 🤖 Auto-Learning System
 
-* Logging system (`attack_logs.csv`)
-* Attack analytics dashboard (Streamlit)
-* Metrics tracking (risk, matches, actions)
-
----
-
-### 🧠 Auto-Learning Defense (NEW 🔥)
-
-* Keyword extraction from logs
-* Frequency-based filtering
-* Clean pattern learning (`['safeguards']`)
+* CSV logging (self-generated) ✅
+* Keyword extraction ✅
+* Dynamic pattern injection ✅
 
 ---
 
-## 🛡️ Current System Capability
+### ⚠️ Major Problem Identified & Fixed
 
 ```text
-User Query
- → Retrieval
- → Context Sanitization
- → Semantic Detection
- → Confidence Scoring
- → Action (allow / guard / block)
- → Logging
- → Auto-Learning (pattern extraction)
+Overblocking due to naive pattern accumulation
+```
+
+### Fixes Applied:
+
+* Stopwords filtering
+* Word boundary regex
+* Dynamic weight control
+* Reduced false positives
+
+---
+
+## 🚧 Current Upgrade (Active Work)
+
+### 🔥 Intent Layer Integration
+
+You are adding:
+
+```text
+Intent Detection → BEFORE scoring
 ```
 
 ---
 
-## ⚠️ Current Limitation (IMPORTANT)
+## 🧠 System Evolution
+
+### Before:
 
 ```text
-All patterns are treated equally ❌
+Pattern → Score → Decision ❌
 ```
 
-Example:
-
-* "what rules?" → medium
-* "explain internal safeguards" → HIGH
-
-👉 But system doesn’t fully differentiate impact yet
-
----
-
-## 🎯 Next Step (After Breakfast)
-
-👉 **Pattern Weighting**
-
-You will build:
-
-### 🧠 New Layer
-
-* Assign weights to patterns
-* Improve risk scoring accuracy
-* Detect pattern combinations (multi-signal attacks)
-
----
-
-## 🚀 Goal for Next Session
+### Now:
 
 ```text
-"My system doesn't just detect attacks,
-it prioritizes them intelligently."
+Intent → Pattern → Score → Decision ✅
 ```
 
 ---
 
-## 🧠 Mindset Shift
+## 🎯 Objective
 
 ```text
-OLD: Detect attack ❌  
-CURRENT: Score attack ✅  
-NEXT: Prioritize attack impact 🔥
+Detect WHY user is asking, not just WHAT they typed
+```
+
+---
+
+## 🗂️ Files You Are Working On
+
+* `intent_classifier.py` 🆕
+* `pattern_weighting.py` (update)
+* `test_pattern_weighting.py` (validate output)
+
+---
+
+## 🧪 Expected Output After Upgrade
+
+| Query                           | Intent    | Risk   |
+| ------------------------------- | --------- | ------ |
+| What rules guide your responses | probing   | MEDIUM |
+| Explain internal safeguards     | sensitive | HIGH   |
+| What is AI security             | benign    | LOW    |
+
+---
+
+## ⚠️ Known Gap
+
+```text
+System still cannot understand multi-step attacks
+```
+
+---
+
+## 🚀 Next After This
+
+👉 **Sequential / Multi-step Attack Detection**
+
+---
+
+## 🧠 Mindset Reminder
+
+```text
+Today: You built detection  
+Now: You build reasoning
 ```
 
 ---
 
 ## ▶️ Resume Command
 
-When you're back, just say:
+When you’re back:
 
-👉 **"build pattern weighting"**
+👉 **"test intent-aware defense"**
 
 ---
 
-Enjoy your breakfast 🍽️
-You’re now entering **real intelligence layer of AI security**.
+## 🧭 Direction Check
+
+You are EXACTLY on track in syllabus:
+
+```text
+Defense Engineering → Advanced Systems → Context Awareness
+```
+
+---
+
+## 🏁 Status
+
+```text
+You are no longer building rules  
+You are building intelligence into defense
+```
