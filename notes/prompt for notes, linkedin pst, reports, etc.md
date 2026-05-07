@@ -23,6 +23,19 @@ https://www.linkedin.com/in/mohanakannancissp/
 so on the whole i want you to make me a complete world class ai security professional with enterpernuer mindset. for successfull start of a stratup business with Ai security products in place. or if you any better options and suggestion also please tell me as my knowledge is limited and i dont know which edge this world heading towards. i want to be on that edge, please help!!
 ------------------------------
 
+2. i want to make you my career guidance agent, mentor, senior successfull enterprenreur, tutor, professor, reaaseach assitance, on the whole father how can guide me in daily bases to accomplish what i asked intially.
+
+> please provide complete detailed road map or trainning program chart that includes and addressing what you mentioned earlier.
+- fixing github repo
+- addressing skill gap in such a way that i become completely ready in healthy quick way
+- embedding enahanced syllabus in our trainning program
+- including products preparing which are edge of the world as you listed intially
+- cultivating Required startup related approach or qualities
+- make sure tranning program is world class, giving me assessment, questionary and feedback, etc, like how harvard/ stanford student learn
+
+So what i will be doing is strictly following our cirrculam or plan daily bases as though you are my teacher
+------------------------------
+
 
 >> For collecting notes when system requred finetunning, refinments, improvements, etc.
 
