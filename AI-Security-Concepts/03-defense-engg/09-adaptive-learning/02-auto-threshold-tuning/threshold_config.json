@@ -1,0 +1,8 @@
+{
+  "high_threshold": 7,
+  "medium_threshold": 2,
+  "min_high_threshold": 5,
+  "max_high_threshold": 9,
+  "min_medium_threshold": 1,
+  "max_medium_threshold": 4
+}

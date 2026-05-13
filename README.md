@@ -24,6 +24,8 @@ git diff -> Shows exact code changes
 git commit → records decision  
 git push → publishes decision
 
+git pull --rebase origin main
+git push origin main
 
 
 cmd to get into venv
@@ -46,13 +48,3 @@ or
 
 python "notes\04-fixes\06-red team\01-test generator\test_generator.py"
 
-## Weekly Additions
-
-| Activity                 | Frequency    |
-| ------------------------ | ------------ |
-| GitHub cleanup           | weekly       |
-| LinkedIn post            | weekly       |
-| Architecture diagram     | every module |
-| Threat modeling          | every module |
-| Startup analysis         | weekly       |
-| AI security paper review | weekly       |
