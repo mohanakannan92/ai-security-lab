@@ -3,7 +3,7 @@
 # ============================================
 
 import re
-from intent_classifier import classify_intent
+from core.intent_classifier import classify_intent
 
 # --------------------------------------------
 # Suspicious Pattern Weights
