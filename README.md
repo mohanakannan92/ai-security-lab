@@ -48,3 +48,11 @@ or
 
 python "notes\04-fixes\06-red team\01-test generator\test_generator.py"
 
+cd C:\Mohanakannan\AI\source\ai-security-lab\backend
+.\venv\Scripts\activate
+python -m uvicorn app:app --reload
+
+or 
+
+.\venv\Scripts\python.exe -m uvicorn app:app --reload
+
